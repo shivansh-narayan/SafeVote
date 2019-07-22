@@ -1,10 +1,5 @@
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
 
-<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
-
-***INSERT GRAPHIC HERE (include hyperlink in image)***
-
-# Repository Title Goes Here
+# Safe Vote
 
 > Subtitle or Short Description Goes Here
 
@@ -153,7 +148,7 @@ $ bower install
 ## Team
 
 
-| <a href="http://fvcproductions.com" target="_blank">**Shivansh Narayan**</a> | <a href="https://avatars3.githubusercontent.com/u/34347884?s=400&u=5ae91062f6c80ee7d43ff0047d8a692f6a457bd0&v=4" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
+| <a href="https://www.linkedin.com/in/shivanshnarayan/" target="_blank">**Shivansh Narayan**</a> | <a href="https://avatars3.githubusercontent.com/u/34347884?s=200&u=5ae91062f6c80ee7d43ff0047d8a692f6a457bd0&v=4" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**Hardik Mehta**</a> |
 | :---: |:---:| :---:|
 | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)    | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)  |
 | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
