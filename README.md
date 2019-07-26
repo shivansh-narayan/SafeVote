@@ -3,11 +3,6 @@
 
 > A DaPP(Decentralized) Secured Voting Application
 
-**Badges will go here**
-
-
-
-
 ## Solution
 
 A blockchain based webapp to facilitate online voting with realtime result in a secured and transparent way.
