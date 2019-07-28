@@ -36,6 +36,7 @@ A blockchain based webapp to facilitate online voting with realtime result in a 
 **Team Name-** Underdogs
 
 <a href="https://www.linkedin.com/in/shivanshnarayan/" target="_blank">**Shivansh Narayan**</a> |
-<a href="https://www.linkedin.com/in/hardik-mehta-72a396145/" target="_blank">**Hardik Mehta**</a> 
+<a href="https://www.linkedin.com/in/hardik-mehta-72a396145/" target="_blank">**Hardik Mehta**</a>  |
+<a href="http://www.linkedin.com/in/harsh-87/" target="_blank">**Harsh Kothari**</a>
 
 
