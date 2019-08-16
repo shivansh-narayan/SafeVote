@@ -13,6 +13,10 @@ contract Election {
         uint aadhar;
         bool registered;
         bool voted;
+
+        string name;
+        string email;
+        uint mobile_no;
     }
 
     // Store Candidates
@@ -34,13 +38,13 @@ contract Election {
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
         candidatesCount ++;
     }
-    function register(uint aadhar) public {
+    function register(uint aadhar,string name ,string email,uint mob) public {
 
         //check if already registered
         if(voters[aadhar].registered==true) {
             revert("Voter is already registered");
         }
-        voters[aadhar] = Voter(aadhar,true,false);
+        voters[aadhar] = Voter(aadhar,true,false,name,email,mob);
 
     }
     //functuion to caste vote
