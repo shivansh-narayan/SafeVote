@@ -1,5 +1,5 @@
 pragma solidity >0.4.0 <0.6.0;
-
+//..
 contract Election {
     // cadidate info struct.
     struct Candidate {
