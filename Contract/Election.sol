@@ -1,6 +1,6 @@
 pragma solidity >0.4.0 <0.6.0;
 //..
-contract Election {
+contract SampleVoting {
     // cadidate info struct.
     struct Candidate {
         uint id;
@@ -38,7 +38,7 @@ contract Election {
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
         candidatesCount ++;
     }
-    function register(uint aadhar,string name ,string email,uint mob) public {
+    function register(uint aadhar,string memory name ,string memory email,uint mob) public {
 
         //check if already registered
         if(voters[aadhar].registered==true) {
