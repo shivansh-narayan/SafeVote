@@ -12,10 +12,12 @@ function App() {
     marginTop: 1,
     marginBottom: 1,
   }
-
+  const st = {
+    paddingTop: 2,
+  }
   return (
     <div className="App">
-      <div className="jumbotron jumbotron-fluid">
+      <div style={st} className="jumbotron jumbotron-fluid">
         <h1 className="text-center">SafeVote</h1>
         <p style={style} className="text-center">A Decentralised Voting Application Based on Azure Blockchain Services</p>
       </div>

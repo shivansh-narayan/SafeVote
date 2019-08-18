@@ -60,16 +60,12 @@ class Register extends Component{
                         <h2 className="text-info text-center">Register here!</h2>
                         <h4 className="display-1 text-center">Aadhar ID:</h4>
                         <input value={this.state.aadhar} onChange={this.handleAadhar} type="text" className="form-control"></input>
-                        <br />
                         <h4 className="display-1 text-center">Name:</h4>
                         <input value={this.state.name} onChange={this.handleName} type="text" className="form-control"></input>
-                        <br />
                         <h4 className="display-1 text-center">Email:</h4>
                         <input value={this.state.email} onChange={this.handleEmail} type="text" className="form-control"></input>
-                        <br />
                         <h4 className="display-1 text-center">Mob. No.:</h4>
                         <input value={this.state.no} onChange={this.handleNo} type="text" className="form-control"></input>
-                        <br />
                         <br />
                         <a onClick={this.register} style={style} className="text-center btn btn-primary">Register</a>
                         <br />

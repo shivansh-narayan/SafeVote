@@ -15,6 +15,7 @@ function Candidate()
     return(
         <div>
             <h4>Candidate Count</h4>
+            <p>(Candidate ID should be less than this No.)</p>
             <p>{ans}</p>
         </div>
     );
