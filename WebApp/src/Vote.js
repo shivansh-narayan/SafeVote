@@ -43,31 +43,28 @@ class Vote extends Component{
         const web3 = new Web3(Web3.givenProvider);
         web3.eth.defaultAccount = web3.eth.accounts[0];
         const Contract = new web3.eth.Contract(abi,'0x086a079148ae6393df19385204c09e23d178de13');
-        Contract.methods.candidatesCount().call().then((response)=>{
+        Contract.methods.candidatesCount().call().then((error,response)=>{
             console.log(response);
         });
-
-        /*
-        Contract.methods.candidates(0).call().then((response)=>{
-            console.log(response.voteCount);
-        });
-        Contract.methods.candidates(1).call().then((response)=>{
-            console.log(response.voteCount);
-        });
-        Contract.methods.candidates(2).call().then((response)=>{
-            console.log(response.voteCount);
-        });*/
     }
     async vote(){
-        const web3 = new Web3(Web3.givenProvider);
-        //console.log(Accounts._getEthereumCall);
-        var accounts = await web3.eth.getAccounts();
-        web3.eth.defaultAccount = accounts[0];
-        console.log(web3.eth.defaultAccount);
-        const Contract = new web3.eth.Contract(abi,'0x086a079148ae6393df19385204c09e23d178de13');
-        Contract.methods.vote(this.state.candidate,this.state.aadhar).send({from: web3.eth.defaultAccount}).then((response)=>{
-            console.log(response);
-        });
+        if(this.state.candidate < 3)
+        {
+            const web3 = new Web3(Web3.givenProvider);
+            var accounts = await web3.eth.getAccounts();
+            web3.eth.defaultAccount = accounts[0];
+            //console.log(web3.eth.defaultAccount);
+            const Contract = new web3.eth.Contract(abi,'0x086a079148ae6393df19385204c09e23d178de13');
+            Contract.methods.vote(this.state.candidate,this.state.aadhar).send({from: web3.eth.defaultAccount}).then((response)=>{
+                //console.log(response);
+            }).catch(function(e){
+                alert("Either The User has voted already or the user is not registered");
+            });
+        }
+        else
+        {
+            alert("Invalid CandidateID");
+        }
     }
     render(){
         const style = {

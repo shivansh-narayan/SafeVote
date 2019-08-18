@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import {abi} from './abi.js';
 import Web3 from 'web3';
 
-
 class Register extends Component{
     constructor(props){
         super(props);
@@ -38,8 +37,11 @@ class Register extends Component{
         web3.eth.defaultAccount = accounts[0];
         console.log(web3.eth.defaultAccount);
         const Contract = new web3.eth.Contract(abi,'0x086a079148ae6393df19385204c09e23d178de13');
-        Contract.methods.register(this.state.aadhar,this.state.name,this.state.email,this.state.no).send({from: web3.eth.defaultAccount}).then((response)=>{
-            console.log(response.status);
+        Contract.methods.register(this.state.aadhar,this.state.name,this.state.email,this.state.no).send({from: web3.eth.defaultAccount}).then((error,response)=>{
+            console.log(response);
+        }).catch(function(e){
+            console.log(e.status);
+            alert("User is already Registered");
         });
     }
     render(){

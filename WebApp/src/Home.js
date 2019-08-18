@@ -22,9 +22,9 @@ class Home extends Component
                 <br />
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-3">
+                        <div className="col-sm-4">
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-2">
                             <Link to="/register">
                                 <a className="btn btn-primary">Register</a>
                             </Link>

@@ -5,12 +5,14 @@ import Register from './Register.js';
 import Vote from './Vote.js';
 import Stats from './stats.js';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Footer from './Footer';
 
 function App() {
   const style = {
     marginTop: 1,
     marginBottom: 1,
   }
+
   return (
     <div className="App">
       <div className="jumbotron jumbotron-fluid">
@@ -23,6 +25,9 @@ function App() {
         <Route path="/stats" exact component={Stats} />
         <Route path="/" exact component={Home} />
       </Router>
+      <Footer>
+        <h4 className="text-center">Built By Hardik And Shivansh</h4>
+      </Footer>
     </div>
   );
 }
