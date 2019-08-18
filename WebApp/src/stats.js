@@ -17,7 +17,7 @@ class Stats extends Component{
     {
         const web3 = new Web3(Web3.givenProvider);
         web3.eth.defaultAccount = web3.eth.accounts[0];
-        const Contract = new web3.eth.Contract(abi,'0x67dcd61e23cb2746dc4c41c2f6bf2a252d09a8f1');
+        const Contract = new web3.eth.Contract(abi,'0x086a079148ae6393df19385204c09e23d178de13');
         Contract.methods.candidates(0).call().then((response)=>{
             this.setState({cand1: response.voteCount});
         });
