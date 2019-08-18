@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Home.js';
 import Register from './Register.js';
 import Vote from './Vote.js';
+import Stats from './stats.js';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Router>
         <Route path="/register" exact component={Register} />
         <Route path="/vote" exact component={Vote} />
+        <Route path="/stats" exact component={Stats} />
         <Route path="/" exact component={Home} />
       </Router>
     </div>

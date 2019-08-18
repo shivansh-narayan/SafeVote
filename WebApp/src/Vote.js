@@ -2,7 +2,24 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import {abi} from './abi.js';
 import Web3 from 'web3';
-import Accounts from 'web3-eth-accounts';
+
+function Candidate()
+{
+    const web3 = new Web3(Web3.givenProvider);
+    web3.eth.defaultAccount = web3.eth.accounts[0];
+    const Contract = new web3.eth.Contract(abi,'0x67dcd61e23cb2746dc4c41c2f6bf2a252d09a8f1');
+    let ans = 3;
+    Contract.methods.candidatesCount().call().then((response)=>{
+        ans = response;
+    });
+    return(
+        <div>
+            <h4>Candidate Count</h4>
+            <p>{ans}</p>
+        </div>
+    );
+}
+
 class Vote extends Component{
     constructor(props){
         super(props);
@@ -29,6 +46,8 @@ class Vote extends Component{
         Contract.methods.candidatesCount().call().then((response)=>{
             console.log(response);
         });
+
+        /*
         Contract.methods.candidates(0).call().then((response)=>{
             console.log(response.voteCount);
         });
@@ -37,7 +56,7 @@ class Vote extends Component{
         });
         Contract.methods.candidates(2).call().then((response)=>{
             console.log(response.voteCount);
-        });
+        });*/
     }
     async vote(){
         const web3 = new Web3(Web3.givenProvider);
@@ -59,6 +78,7 @@ class Vote extends Component{
         }
         return(
             <div className="container">
+                <Candidate />
                 <div className="row">
                     <div className="col-sm-4">
                     </div>

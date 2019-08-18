@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import {abi} from './abi.js';
 import Web3 from 'web3';
-import Accounts from 'web3-eth-accounts';
 
 
 class Register extends Component{
@@ -10,9 +9,24 @@ class Register extends Component{
         super(props);
         this.state = {
             aadhar: 0,
+            name: '',
+            email: '',
+            no: 0,
         }
+        this.handleName = this.handleName.bind(this);
+        this.handleNo = this.handleNo.bind(this);
+        this.handleEmail = this.handleEmail.bind(this);
         this.handleAadhar = this.handleAadhar.bind(this);
         this.register = this.register.bind(this);
+    }
+    handleEmail(event){
+        this.setState({email: event.target.value});
+    }
+    handleName(event){
+        this.setState({name: event.target.value});
+    }
+    handleNo(event){
+        this.setState({no: event.target.value});
     }
     handleAadhar(event){
         this.setState({aadhar: event.target.value});
@@ -24,8 +38,8 @@ class Register extends Component{
         web3.eth.defaultAccount = accounts[0];
         console.log(web3.eth.defaultAccount);
         const Contract = new web3.eth.Contract(abi,'0x67dcd61e23cb2746dc4c41c2f6bf2a252d09a8f1');
-        Contract.methods.register(this.state.aadhar).send({from: web3.eth.defaultAccount}).then((response)=>{
-            console.log(response);
+        Contract.methods.register(this.state.aadhar,this.state.name,this.state.email,this.state.no).send({from: web3.eth.defaultAccount}).then((response)=>{
+            console.log(response.status);
         });
     }
     render(){
@@ -44,6 +58,15 @@ class Register extends Component{
                         <h2 className="text-info text-center">Register here!</h2>
                         <h4 className="display-1 text-center">Aadhar ID:</h4>
                         <input value={this.state.aadhar} onChange={this.handleAadhar} type="text" className="form-control"></input>
+                        <br />
+                        <h4 className="display-1 text-center">Name:</h4>
+                        <input value={this.state.name} onChange={this.handleName} type="text" className="form-control"></input>
+                        <br />
+                        <h4 className="display-1 text-center">Email:</h4>
+                        <input value={this.state.email} onChange={this.handleEmail} type="text" className="form-control"></input>
+                        <br />
+                        <h4 className="display-1 text-center">Mob. No.:</h4>
+                        <input value={this.state.no} onChange={this.handleNo} type="text" className="form-control"></input>
                         <br />
                         <br />
                         <a onClick={this.register} style={style} className="text-center btn btn-primary">Register</a>
