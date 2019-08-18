@@ -23,7 +23,7 @@ class Register extends Component{
         var accounts = await web3.eth.getAccounts();
         web3.eth.defaultAccount = accounts[0];
         console.log(web3.eth.defaultAccount);
-        const Contract = new web3.eth.Contract(abi,'0xfa641dcd8fbca93f8894dabda69e75ab426249d8');
+        const Contract = new web3.eth.Contract(abi,'0x67dcd61e23cb2746dc4c41c2f6bf2a252d09a8f1');
         Contract.methods.register(this.state.aadhar).send({from: web3.eth.defaultAccount}).then((response)=>{
             console.log(response);
         });
